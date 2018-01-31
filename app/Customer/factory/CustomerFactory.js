@@ -7,6 +7,8 @@ angular.module("Bangazon")
                 return $http({
                     "url": "http://localhost:5000/api/customer",
                     "method": "GET"
+                }).then(response =>{
+                    return response.data
                 })
 
             }
@@ -16,8 +18,9 @@ angular.module("Bangazon")
                 return $http({
                     "url": `http://localhost:5000/api/customer/${id}`,
                     "method": "GET"
+                }).then(response =>{
+                    return response.data
                 })
-
             }
         },
         "update": {

@@ -1,0 +1,7 @@
+<div ng-include="'app/Customer/partials/customer.html'"></div>
+
+<h2>Employee List</h2>
+<div ng-repeat="c in customers">
+    <h3 id="c{{c.customerId}}">{{c.firstName}} {{c.lastName}}</h3> 
+    <button ng-click="moreInfo(c.customerId)">More Info</button>
+</div>

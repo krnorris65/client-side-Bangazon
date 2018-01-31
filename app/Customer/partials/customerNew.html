@@ -1,0 +1,7 @@
+<div ng-include="'app/Customer/partials/customer.html'"></div>
+<h2>Add New Customer</h2>
+<div>
+    First Name: <input type="text" ng-model="newCustomer.firstName" /> 
+    Last Name: <input type="text" ng-model="newCustomer.lastName" />
+</div>
+<button ng-click="addNewCustomer()">Add</button>
