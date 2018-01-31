@@ -1,4 +1,4 @@
-DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,19 @@ DOCTYPE <!DOCTYPE html>
 </head>
 <body ng-app="Bangazon">
 
-    <div class="content" ng-view ng-cloak></div>
+    <nav ng-include="'app/NavBar/partial/NavBar.html'"></nav>
+    <h1>Title</h1>
     
 
+    <div ng-view></div>
+    
+
+    <script src="lib/node_modules/angular/angular.min.js"></script>
+    <script src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+
     <script src="./app/app.js"></script>
-    <script src="./Customer/controllers/CustomerCtrl.js"></script>
+    <script src="./app/Customer/factory/CustomerFactory.js"></script>
+    <script src="./app/Customer/controllers/CustomerCtrl.js"></script>
     
 </body>
 </html>
