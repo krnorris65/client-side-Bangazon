@@ -1,18 +1,17 @@
 angular.module("Bangazon").controller("CustomerInfoCtrl",
 function ($scope, CustomerFactory, $routeParams, $timeout, $location) {
 
-    $scope.customer = {}
+    $scope.editCustomer = {}
     
     CustomerFactory.single($routeParams.customerId).then(customer => {        
-        $scope.customer = customer
-
+        $scope.editCustomer = customer
     })
 
 
     $scope.updateCustomer = () => {
         if($scope.editCustomer.firstName !== undefined && $scope.editCustomer.lastName !== undefined) {
             const customer = {
-                "customerId": $scope.customer.customerId,
+                "customerId": $scope.editCustomer.customerId,
                 "firstName": $scope.editCustomer.firstName,
                 "lastName": $scope.editCustomer.lastName
             }

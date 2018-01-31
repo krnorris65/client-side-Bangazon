@@ -1,13 +1,13 @@
 <div ng-include="'app/Customer/partials/customer.html'"></div>
 
-<h1>{{ customer.firstName }} {{ customer.lastName }}</h1>
+<h1>{{ editCustomer.firstName }} {{ editCustomer.lastName }}</h1>
 
-<h3>Created on: {{ customer.dateCreated | date:"fullDate" }}</h3>
+<h3>Created on: {{ editCustomer.dateCreated | date:"fullDate" }}</h3>
 
 <button ng-click="editInfo = !editInfo">Edit</button>
 
 <div ng-show="editInfo">
-
+    
     First Name: <input ng-model="editCustomer.firstName" />
     Last Name: <input ng-model="editCustomer.lastName" />
     <button ng-click="updateCustomer()">Update</button>
